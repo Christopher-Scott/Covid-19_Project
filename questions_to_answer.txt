@@ -1,7 +1,9 @@
 Were mitigation measures followed by a drop in mobility? If yes, was there a delay?
 - Calculate delay based on certain threshold dropoff in mobility 
 - How to calculate what a corresponding drop is? Maybe lowest point in a 7 day look-ahead window?
+- group by mitigation type, compare min, avg, max values
 
 Which mitigation measures had the greatest effect on mobility?
 
 Frequency of mitigation measures per state?
+
