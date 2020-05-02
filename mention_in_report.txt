@@ -1,4 +1,19 @@
 Issues with the Migitation data set and cleaning changes:
-- Mitigation events related to counties were not considered
-- Examples from the mitigation dataset were only considered if they had a valid mitigation type category.  For this reason the data from New Jersey was not considered.
-- considered the mitigation tags associated with the example date, some examples were the announcement of a mitigation event that would take effect at a later date.  For this reason the mobility decrease window was considered and the delay calculated.
+    - Mitigation events related to counties were not considered
+    - Examples from the mitigation dataset were only considered if they had a valid mitigation type category. For this reason the data from New Jersey was not considered.
+
+
+Conclusions from Average Mobility and the Number of Mitigation Events:
+- Google mobility data indicates large decreases in Retail and Recreation, Workplaces, and Transit Stations
+- Grocery and Pharmacy experienced a significant (> 20%) increase coinciding with the period of most mitigation events
+- Parks had large variance in mobility.  It is of note that the baseline mobility was from mid February when it was Winter.  There was a very large spike in mobility before mitigation events began in earnest, likely coinciding with the onset of spring weather, before dropping back to near baseline levels.
+- Residential mobility saw around a 20% increase after the time when mitigation events began
+
+
+- Comparing average mobility and the number of mitigation events, significant drops in mobility coincidided with increases in mitigation events from state governments
+
+Conclusions and analysis related to calculated drops and delays via window method:
+- considered the mitigation tags associated with the example date, some examples were the announcement of a mitigation event that would take effect at a later date.
+- a window period of 5 days was used to accommodate the delay between the mitigation event and a corresponding drop in mobility
+- The drop in mobility within a window was calculated as the difference between the minimum mobility value in the window and the mobility at the mitigation event date.  The delay from the mitigation event date to the mobiltiy minimum was also calculated
+- One potential drawback to this scheme is the concurrency of mitigation events, not able to conclude on the causal effect of mitigation events.
