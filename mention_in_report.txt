@@ -1,0 +1,4 @@
+Issues with the Migitation data set and cleaning changes:
+- Mitigation events related to counties were not considered
+- Examples from the mitigation dataset were only considered if they had a valid mitigation type category.  For this reason the data from New Jersey was not considered.
+- considered the mitigation tags associated with the example date, some examples were the announcement of a mitigation event that would take effect at a later date.  For this reason the mobility decrease window was considered and the delay calculated.
