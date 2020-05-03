@@ -3,7 +3,7 @@ Issues with the Migitation data set and cleaning changes:
     - Examples from the mitigation dataset were only considered if they had a valid mitigation type category. For this reason the data from New Jersey was not considered.
 
 
-Conclusions from Average Mobility and the Number of Mitigation Events:
+Conclusions from Average Mobility and the Number of Mitigation Events Visualization:
 - Google mobility data indicates large decreases in Retail and Recreation, Workplaces, and Transit Stations
 - Grocery and Pharmacy experienced a significant (> 20%) increase coinciding with the period of most mitigation events
 - Parks had large variance in mobility.  It is of note that the baseline mobility was from mid February when it was Winter.  There was a very large spike in mobility before mitigation events began in earnest, likely coinciding with the onset of spring weather, before dropping back to near baseline levels.
@@ -12,8 +12,18 @@ Conclusions from Average Mobility and the Number of Mitigation Events:
 
 - Comparing average mobility and the number of mitigation events, significant drops in mobility coincidided with increases in mitigation events from state governments
 
+
 Conclusions and analysis related to calculated drops and delays via window method:
+
+    Analysis
+- At first considered drops in mobility only.  This was insufficient due to net increases in residential mobility and parks mobility
 - considered the mitigation tags associated with the example date, some examples were the announcement of a mitigation event that would take effect at a later date.
-- a window period of 5 days was used to accommodate the delay between the mitigation event and a corresponding drop in mobility
-- The drop in mobility within a window was calculated as the difference between the minimum mobility value in the window and the mobility at the mitigation event date.  The delay from the mitigation event date to the mobiltiy minimum was also calculated
-- One potential drawback to this scheme is the concurrency of mitigation events, not able to conclude on the causal effect of mitigation events.
+- a window period of 5 days was used to accommodate the delay between the mitigation event and a corresponding change in mobility
+- The change in mobility within a window was calculated as the difference between the greatest magnitude (min or max) mobility value in the window and the mobility at the mitigation event date.  The delay from the mitigation event date to the mobiltiy minimum was also calculated
+- The average delay between the mitigation event and the change in mobility was very consistent across categories within the window
+- One potential drawback to this scheme is the concurrency of mitigation events, not able to conclude on the causal effect of mitigation events
+
+    Conclusions
+- We can see the largest mobility changes for "events cancelled", "School closing" and "non-essential closing" mitigation events.  While it could be expected that stay at home orders would impact mobility the most, it is likely that other mitigiation events preceded a stay at home order and instigated the greatest changes.
+- Residential mobility experienced a net increase change with large positive mobility changes from "events cancelled" and "school closing" mitigation events.
+- Park mobility had a large amount of variance, and the window analysis indicates differing responses in park mobility relative to different mitigation efforts.  For example "work restriction" corresponded to an average 7.08% increase, whereas "stay at home" corresponded to a -9.79% change in mobility.
