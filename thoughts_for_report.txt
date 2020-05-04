@@ -1,7 +1,26 @@
+Questions to Answer
+
+Were mitigation measures followed by a drop in mobility? If yes, was there a delay?
+- Calculate delay based on certain threshold dropoff in mobility 
+- How to calculate what a corresponding drop is? Maybe lowest point in a 7 day look-ahead window?
+- group by mitigation type, compare min, avg, max values
+
+Which mitigation measures had the greatest effect on mobility?
+
+Frequency of mitigation measures per state?
+- Calculate average time in between each mitigation measure given for each state. Will show how often a state's government is communicating with the public.
+
+Which state listens the least or takes the longest to listen to mitigation measures?
+- Find the frequency (count the number of times) where the delay of a state (calculated by the mobility dropping below it's average) takes longer than it's average. This will show which state listens the least to it's government and which governor's words seems to have the least amount of power. Could be caused by a variety of factors in a state such as public governor approval rates, poverty levels and technology accessibility, literacy rate, population density,etc.
+
+
+
+
+Mention in Report
+
 Issues with the Migitation data set and cleaning changes:
     - Mitigation events related to counties were not considered
     - Examples from the mitigation dataset were only considered if they had a valid mitigation type category. For this reason the data from New Jersey was not considered.
-
 
 Conclusions from Average Mobility and the Number of Mitigation Events Visualization:
 - Google mobility data indicates large decreases in Retail and Recreation, Workplaces, and Transit Stations
@@ -9,12 +28,9 @@ Conclusions from Average Mobility and the Number of Mitigation Events Visualizat
 - Parks had large variance in mobility.  It is of note that the baseline mobility was from mid February when it was Winter.  There was a very large spike in mobility before mitigation events began in earnest, likely coinciding with the onset of spring weather, before dropping back to near baseline levels.
 - Residential mobility saw around a 20% increase after the time when mitigation events began
 
-
 - Comparing average mobility and the number of mitigation events, significant drops in mobility coincidided with increases in mitigation events from state governments
 
-
 Conclusions and analysis related to calculated drops and delays via window method:
-
     Analysis
 - At first considered drops in mobility only.  This was insufficient due to net increases in residential mobility and parks mobility
 - considered the mitigation tags associated with the example date, some examples were the announcement of a mitigation event that would take effect at a later date.
